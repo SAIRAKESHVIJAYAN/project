@@ -405,6 +405,4 @@ if st.button("Predict"):
 if __name__ == "__main__":
     main()
 
-!git init
-
 !git add app.py random_forest_telecom_churn.pkl
