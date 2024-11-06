@@ -397,10 +397,10 @@ user_data = pd.DataFrame([[state, account_length, voice_messages, intl_mins, int
                            night_calls, voice_plan_yes, intl_plan_yes]], columns=input_features)
 
 # Display prediction results
-    if st.button("Predict"):
-        prediction = model.predict(input_features)
-        prediction_text = "will churn" if prediction[0] == 1 else "will not churn"
-        st.write(f"The model predicts that this customer {prediction_text}.")
+if st.button("Predict"):
+    prediction = model.predict(input_features)
+    prediction_text = "will churn" if prediction[0] == 1 else "will not churn"
+    st.write(f"The model predicts that this customer {prediction_text}.")
 
 if __name__ == "__main__":
     main()
